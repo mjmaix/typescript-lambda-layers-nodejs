@@ -12,7 +12,7 @@ Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://typescript-lambda-layers-nodejs/1973bad229f152b603575f8613d16735
+      CodeUri: s3://typescript-lambda-layers-nodejs/6067741c4986d2c1d4f36ba9e403f23e
       Handler: hello-world/app.lambdaHandler
       Layers:
       - Ref: TypeScriptLambdaDepLayer
@@ -27,7 +27,7 @@ Resources:
     Type: AWS::Serverless::LayerVersion
     Properties:
       LayerName: typescript-lambda-layers-nodejs
-      ContentUri: s3://typescript-lambda-layers-nodejs/d05615dc3e7f6a20a2b6cc48c1215698
+      ContentUri: s3://typescript-lambda-layers-nodejs/816322dd84d4d0e3758b067fac3f46d1
       CompatibleRuntimes:
       - nodejs8.10
       LicenseInfo: MIT

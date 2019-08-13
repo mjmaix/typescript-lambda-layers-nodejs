@@ -1,9 +1,8 @@
 import { APIGatewayProxyHandler } from 'aws-lambda';
 import { DepUtils } from '@tlln/utils';
-const utils = new DepUtils();
 let response;
 
-const greetings = utils.sayHello();
+const greetings = DepUtils.sayHello();
 
 const lambdaHandler: APIGatewayProxyHandler = async (event, context) => {
   try {
