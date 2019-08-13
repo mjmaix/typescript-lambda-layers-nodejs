@@ -1,6 +1,7 @@
 #!/bin/sh -x
 
 
+sh ./prep-module.sh dependencies-ts || { echo "dependencies-ts failed" ; exit 1; }
 sh ./prep-module.sh hello-world || { echo "hello-world prep failed" ; exit 1; }
 
 echo 'Build and Tests are passing'
@@ -24,4 +25,5 @@ sam deploy \
    EnvType=$ENV_TYPE \
  || { echo "sam deploy failed" ; exit 1; }
 
+sh ./post-deploy.sh dependencies-ts
 sh ./post-deploy.sh hello-world

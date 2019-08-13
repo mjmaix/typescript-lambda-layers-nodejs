@@ -12,8 +12,10 @@ Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://typescript-lambda-layers-nodejs/b7c829690f1bae6dfae741d61ffde776
+      CodeUri: s3://typescript-lambda-layers-nodejs/1973bad229f152b603575f8613d16735
       Handler: hello-world/app.lambdaHandler
+      Layers:
+      - Ref: TypeScriptLambdaDepLayer
       Runtime: nodejs8.10
       Events:
         HelloWorld:
@@ -21,6 +23,15 @@ Resources:
           Properties:
             Path: /hello
             Method: get
+  TypeScriptLambdaDepLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: typescript-lambda-layers-nodejs
+      ContentUri: s3://typescript-lambda-layers-nodejs/d05615dc3e7f6a20a2b6cc48c1215698
+      CompatibleRuntimes:
+      - nodejs8.10
+      LicenseInfo: MIT
+      RetentionPolicy: Retain
 Outputs:
   HelloWorldApi:
     Description: API Gateway endpoint URL for Prod stage for Hello World function

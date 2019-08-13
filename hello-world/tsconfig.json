@@ -3,8 +3,11 @@
   "compilerOptions": {
     "outDir": "./lib",
     "baseUrl": "./",
-    "typeRoots": ["node_modules/@types"],
-    "types": ["node", "mocha"]
+    "typeRoots": ["node_modules/@types", "../dependencies"],
+    "types": ["node", "mocha"],
+    "paths": {
+      "@tlln/*": ["../dependencies/nodejs/*"]
+    }
   },
   "exclude": ["node_modules", "templates"],
   "include": ["../shared", "../hello-world"]
