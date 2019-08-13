@@ -24,4 +24,4 @@ sam deploy \
    EnvType=$ENV_TYPE \
  || { echo "sam deploy failed" ; exit 1; }
 
-# sh ./post-deploy.sh hello-world
+sh ./post-deploy.sh hello-world

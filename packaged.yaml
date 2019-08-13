@@ -12,8 +12,8 @@ Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://typescript-lambda-layers-nodejs/cc1b744734c627918da3d024d8c0a1ac
-      Handler: app.lambdaHandler
+      CodeUri: s3://typescript-lambda-layers-nodejs/b7c829690f1bae6dfae741d61ffde776
+      Handler: hello-world/app.lambdaHandler
       Runtime: nodejs8.10
       Events:
         HelloWorld:
