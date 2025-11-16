@@ -31,7 +31,7 @@
   "dependencies": {
     "bluebird": "^3.5.5",
     "lodash.keyby": "^4.6.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "query-string": "^6.8.1",
     "uuid": "^3.3.2"
   }
